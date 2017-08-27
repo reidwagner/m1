@@ -37,10 +37,8 @@ double *pop_darr(PyObject *iter, size_t *m)
 
 static PyObject* m1_cost_function(PyObject *self, PyObject *args)
 {
-    PyObject *xs_obj;
-    PyObject *ys_obj;
-    double theta0;
-    double theta1;
+    PyObject *xs_obj, *ys_obj;
+    double theta0, theta1;
     if (!PyArg_ParseTuple(args, "OOdd", &xs_obj, &ys_obj, &theta0, &theta1)) {
 	fprintf(stderr, "Failure parsing function arguments.\n");
 	exit(1);
